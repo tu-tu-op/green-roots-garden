@@ -61,7 +61,30 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom vintage palette
+				vintage: {
+					gold: 'hsl(var(--vintage-gold))',
+					'tree-green': 'hsl(var(--tree-green))',
+					'earth-brown': 'hsl(var(--earth-brown))',
+					'leaf-green': 'hsl(var(--leaf-green))',
+					'bark-brown': 'hsl(var(--bark-brown))'
 				}
+			},
+			fontFamily: {
+				'serif': ['Playfair Display', 'Crimson Text', 'serif'],
+				'vintage': ['Playfair Display', 'serif'],
+				'body': ['Crimson Text', 'serif']
+			},
+			backgroundImage: {
+				'gradient-vintage': 'var(--gradient-vintage)',
+				'gradient-forest': 'var(--gradient-forest)',
+				'gradient-earth': 'var(--gradient-earth)'
+			},
+			boxShadow: {
+				'vintage': 'var(--shadow-vintage)',
+				'paper': 'var(--shadow-paper)',
+				'deep': 'var(--shadow-deep)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

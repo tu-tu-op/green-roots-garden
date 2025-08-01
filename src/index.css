@@ -2,41 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* GreenHeroes Vintage Design System - Earthy, Classic, Botanical */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base vintage parchment backgrounds */
+    --background: 45 29% 97%;  /* warm parchment white */
+    --foreground: 25 25% 15%;  /* deep brown text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card surfaces with subtle warmth */
+    --card: 42 33% 95%;       /* cream card background */
+    --card-foreground: 25 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 42 33% 95%;
+    --popover-foreground: 25 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Forest green primary with earth tones */
+    --primary: 94 45% 25%;    /* deep forest green */
+    --primary-foreground: 45 29% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm earth secondary */
+    --secondary: 30 25% 85%;  /* warm beige */
+    --secondary-foreground: 25 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted earth tones */
+    --muted: 35 15% 88%;      /* light earth */
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Botanical accent */
+    --accent: 85 30% 55%;     /* sage green */
+    --accent-foreground: 45 29% 97%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Tree/nature destructive (for removing trees) */
+    --destructive: 15 75% 55%;
+    --destructive-foreground: 45 29% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Vintage paper borders */
+    --border: 35 20% 82%;
+    --input: 35 20% 90%;
+    --ring: 94 45% 35%;
 
-    --radius: 0.5rem;
+    /* Vintage styling */
+    --radius: 0.75rem;
+    
+    /* Custom vintage colors */
+    --vintage-gold: 45 85% 75%;      /* warm gold accents */
+    --tree-green: 120 40% 35%;       /* tree foliage */
+    --earth-brown: 25 45% 35%;       /* rich soil */
+    --leaf-green: 85 50% 45%;        /* fresh leaves */
+    --bark-brown: 20 30% 25%;        /* tree bark */
+    
+    /* Gradients */
+    --gradient-vintage: linear-gradient(135deg, hsl(var(--background)), hsl(var(--secondary)));
+    --gradient-forest: linear-gradient(135deg, hsl(var(--tree-green)), hsl(var(--leaf-green)));
+    --gradient-earth: linear-gradient(135deg, hsl(var(--earth-brown)), hsl(var(--vintage-gold)));
+    
+    /* Shadows for depth and vintage feel */
+    --shadow-vintage: 0 4px 12px hsl(var(--earth-brown) / 0.15);
+    --shadow-paper: 0 2px 8px hsl(var(--earth-brown) / 0.1);
+    --shadow-deep: 0 8px 24px hsl(var(--earth-brown) / 0.2);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
