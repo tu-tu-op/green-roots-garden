@@ -1,17 +1,17 @@
-import { useState } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { TreePine, Coins, Gift } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { usePoints } from "@/context/PointsContext"; // <-- Use your context here!
+import { Coins, Gift, TreePine } from "lucide-react";
 
 interface SidebarProps {
   onOpenDonation: () => void;
 }
 
 export const Sidebar = ({ onOpenDonation }: SidebarProps) => {
-  const [points, setPoints] = useState(1200);
-  const [isWalletConnected] = useState(true); // Mock connected state
+  const { points } = usePoints(); // <-- Use the real, global points value
+  const isWalletConnected = true; // Mocked; replace with hooked value if needed
 
   return (
     <div className="space-y-6">
@@ -34,7 +34,7 @@ export const Sidebar = ({ onOpenDonation }: SidebarProps) => {
               {isWalletConnected ? "0x742d...B9c4" : "Connect Wallet"}
             </p>
           </div>
-          
+
           <Badge variant="secondary" className="bg-vintage-leaf-green/20 text-vintage-tree-green border-vintage-tree-green/30">
             🌱 Eco Warrior
           </Badge>
@@ -53,7 +53,7 @@ export const Sidebar = ({ onOpenDonation }: SidebarProps) => {
               🌱 {points.toLocaleString()}
             </Badge>
           </div>
-          
+
           <Button 
             onClick={onOpenDonation}
             className="w-full bg-vintage-tree-green hover:bg-vintage-tree-green/80 text-primary-foreground font-body shadow-vintage"
@@ -84,7 +84,7 @@ export const Sidebar = ({ onOpenDonation }: SidebarProps) => {
               <div className="text-xs font-body text-muted-foreground">CO₂ Offset (kg)</div>
             </div>
           </div>
-          
+
           <div className="pt-2 border-t border-vintage-earth-brown/20">
             <div className="text-center">
               <div className="text-sm font-body text-muted-foreground">Rank</div>
